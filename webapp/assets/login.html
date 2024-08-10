@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+  	<link rel="stylesheet" href="styles.css">
+<!--   
+  	 /* Form styling */  -->
+<!-- Form_Style -->
+</head>
+<body>
+    <header>
+        <h1>Dipanshu Restaurant</h1>
+        <nav>
+            <ul>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="order.html">Place Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="gallery">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="image1.png" alt="Image 1">
+            </div>
+            <div class="slide fade">
+                <img src="image2.png" alt="Image 2">
+            </div>
+            <div class="slide fade">
+                <img src="image3.png" alt="Image 3">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+    
+    </section><hr>
+    <div class="login">
+    <section id="login">
+        <h2>Login</h2>
+        <form id="loginForm" action="logindone" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <label for="usertype">Login As:</label>
+            <select id="usertype" name="usertype" required>
+                <option value="customer">Customer</option>
+                <option value="owner">Owner</option>
+            </select><br><br>
+            
+            <button type="submit">Login</button>
+        </form>
+    </section>
+    </div>
+    <section id="contact" class="footer">
+        <div ><p>Contact No:+91 1234567890</p>
+        <p>Email-: Dgfrestuarant@gmail.com</p></div>
+    </section>
+    <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+  </script>
+</body>
+</html>
